@@ -268,6 +268,9 @@ defmodule BeepBop do
               {:ok, something} when is_binary(something) ->
                 String.to_atom(something)
 
+              {:ok, something} when is_atom(something) ->
+                something
+
               {:ok, nil} ->
                 nil
             end
